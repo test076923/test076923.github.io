@@ -8,16 +8,15 @@ summary: "Exercise program."
 active: Exercise
 date: 9/12/2017 3:37:34 PM 
 ---
-# 연습2 #
+# 연습 3 #
 ----------
 
 {% for tag in site.tags %}
-{% if post.categories contains "exercise" %}
   {% assign t = tag | first %}
   {% assign exercise = tag | last %}
-
+        {% if post.categories contains "exercise" %}
   <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
-{% endif %}
+
   <ul class="year">
     {% for post in exercise %}
       {% if post.tags contains t %}
@@ -30,6 +29,7 @@ date: 9/12/2017 3:37:34 PM
             <span class="date">{{ post.date | date: "%Y-%m-%d"  }}</span>
           {% endif %}
         </li>
+      {% endif %}
       {% endif %}
     {% endfor %}
   </ul>
