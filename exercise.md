@@ -18,7 +18,7 @@ date: 9/12/2017 3:37:34 PM
   <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
 
   <ul class="year">
-    {% for post in posts %}
+    {% for post in exercise %}
       {% if post.tags contains t %}
         <li>
           {% if post.lastmod %}
