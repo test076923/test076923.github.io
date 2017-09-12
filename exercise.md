@@ -8,7 +8,7 @@ summary: "Exercise program."
 active: Exercise
 date: 9/12/2017 3:37:34 PM 
 ---
-# 연습 123 #
+# 연습 14423 #
 ----------
 
 {% for tag in site.tags %}
@@ -17,7 +17,9 @@ date: 9/12/2017 3:37:34 PM
 
 {% for post in exercise %}
   {% if post.categories contains "exercise" %}
+  
     <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+    
   {% endif %}
 {% endfor %}
 
