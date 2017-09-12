@@ -12,14 +12,13 @@ date: 9/12/2017 3:37:34 PM
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign exercise = tag | last %}
-  {% if post.categories contains "exercise" %}
-  
+
 <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
     
   <ul class="year">
     {% for post in exercise %}
       {% if post.tags contains t %}
-       /* {% if post.categories contains "exercise" %} */
+        {% if post.categories contains "exercise" %}
         <li>
           {% if post.lastmod %}
             <a href="{{ post.url }}">{{ post.title }}</a> - [<a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>]
@@ -30,11 +29,11 @@ date: 9/12/2017 3:37:34 PM
           {% endif %}
         </li>
       {% endif %}
-   /*   {% endif %} */
+      {% endif %}
     {% endfor %}
   </ul>
 
-{% endif %}
+
 {% endfor %}
 
 
