@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
  C#, python, arduino, opencv, CAD 등을 다루며 연구, 개발 등에 필요한 정보를 공유하고 나누기 위한 목적입니다.
 baseurl: "" # the subpath of your site, e.g. /blog
 lang: "en"
-url: "https://076923.github.io/"
+url: "https://test076923.github.io/"
 #url: "http://localhost:4000" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  076923
