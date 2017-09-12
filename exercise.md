@@ -8,7 +8,7 @@ summary: "Exercise program."
 active: Exercise
 date: 9/12/2017 3:37:34 PM 
 ---
-# 연습 3 #
+# 연습 23 #
 ----------
 
 {% for tag in site.tags %}
