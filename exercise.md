@@ -8,8 +8,8 @@ summary: "Exercise program."
 active: Exercise
 date: 9/12/2017 3:37:34 PM 
 ---
-{% if site.categories contains "exercise" %}
-  {% for tag in site.tags %}
+{% for tag in site.tags %}
+  {% if site.categories contains "exercise" %}
     {% assign t = tag | first %}
     {% assign exercise = tag | last %}
 
@@ -31,6 +31,7 @@ date: 9/12/2017 3:37:34 PM
     {% endfor %}
   </ul>
     
-  {% endfor %}
-{% endif %}
+  {% endif %}
+{% endfor %}
+
 
