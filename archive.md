@@ -14,10 +14,9 @@ active: Category
 
 {% if post.categories contains "posts" %}
   
-<h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+  <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
     
 {% endif %}
-
 
   <ul class="year">
     {% for post in posts %}
