@@ -13,8 +13,12 @@ date: 9/12/2017 3:37:34 PM
   {% assign t = tag | first %}
   {% assign exercise = tag | last %}
 
+{% if site.categories contains "exercise" % }
+
 <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
-    
+
+{% endif %}
+
   <ul class="year">
     {% for post in exercise %}
       {% if post.tags contains t %}
@@ -32,7 +36,6 @@ date: 9/12/2017 3:37:34 PM
       {% endif %}
     {% endfor %}
   </ul>
-
 
 {% endfor %}
 
