@@ -12,11 +12,18 @@ active: Category
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-  <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+{% for post in posts %}
+  {% if post.categories contains "posts" %}
+  
+<h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+    
+  {% endif %}
+{% endfor %}
 
   <ul class="year">
     {% for post in posts %}
       {% if post.tags contains t %}
+        {% if post.categories contains "exercise" %}
         <li>
           {% if post.lastmod %}
             <a href="{{ post.url }}">{{ post.title }}</a> - [<a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>]
@@ -26,6 +33,7 @@ active: Category
             <span class="date">{{ post.date | date: "%Y-%m-%d"  }}</span>
           {% endif %}
         </li>
+      {% endif %}
       {% endif %}
     {% endfor %}
   </ul>
