@@ -19,7 +19,7 @@ date: 9/12/2017 3:37:34 PM
   <ul class="year">
     {% for post in exercise %}
       {% if post.tags contains t %}
-        {% if post.categories contains "exercise" %}
+       /* {% if post.categories contains "exercise" %} */
         <li>
           {% if post.lastmod %}
             <a href="{{ post.url }}">{{ post.title }}</a> - [<a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.id }}">0 Comments</a>]
@@ -30,7 +30,7 @@ date: 9/12/2017 3:37:34 PM
           {% endif %}
         </li>
       {% endif %}
-      {% endif %}
+   /*   {% endif %} */
     {% endfor %}
   </ul>
 
