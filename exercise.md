@@ -15,7 +15,7 @@ date: 9/12/2017 3:37:34 PM
 
 {% if post.categories contains "exercise" %}
   
-<h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+  <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
     
 {% endif %}
 
