@@ -1,7 +1,7 @@
 ---
 bg: "star.gif"
 layout: page
-title: "About"
+title: "Exercise"
 crawlertitle: "076923 : Exercise"
 permalink: /exercise/
 summary: "Exercise program."
