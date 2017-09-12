@@ -8,8 +8,6 @@ summary: "Exercise program."
 active: Exercise
 date: 9/12/2017 3:37:34 PM 
 ---
-# 연습 1414 #
-----------
 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
