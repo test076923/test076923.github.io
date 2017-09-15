@@ -13,9 +13,9 @@ date: 9/12/2017 3:37:34 PM
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-  {% for post in posts  limit: 1 %}
-    {% if post.tags contains t %}
-      {% if post.categories contains "exercise" %}
+  {% for post in posts limit: 1 %}
+    {% if post.categories contains "exercise" %}
+      {% if post.tags contains t %}
       
 <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
 
