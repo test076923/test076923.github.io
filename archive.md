@@ -12,11 +12,15 @@ active: Category
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-{% if site.categories contains "posts" %}
-
+  {% for post in posts  limit: 1 %}
+    {% if post.tags contains t %}
+      {% if post.categories contains "posts" %}
+      
 <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
 
-{% endif %}
+  {% endif %}
+  {% endif %}
+  {% endfor %}
 
   <ul class="year">
     {% for post in posts %}
