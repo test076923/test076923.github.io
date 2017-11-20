@@ -2,12 +2,41 @@
 bg: "star.gif"
 layout: page
 title: "TEST"
-crawlertitle: "076923 : TEST"
+crawlertitle: "076923 : SERarch"
 permalink: /test/
 summary: "TEST program."
 active: TEST
 date: 11/20/2017 3:37:34 PM 
 ---
 
-테스트창
+<div id="results">
+  <h1><!-- `key` listing for `value` --></h1>
+
+  <ul class="results">
+    <!-- results lists -->
+  </ul>
+</div>
+
+<!— Html Elements for Search -->
+<div id="search-container">
+<input type="text" id="search-input" placeholder="search...">
+<ul id="results-container"></ul>
+</div>
+
+<!-- Script pointing to jekyll-search.js -->
+<script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search2.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+</script>
 
