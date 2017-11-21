@@ -10,17 +10,10 @@ date: 11/20/2017 3:37:34 PM
 ---
 TEST 3
 
-<script>
-  function keyUp() {
-    return false;
-} 
-</script>
-
-
 
 <div id="search-container">
   <center>
-<input type="text" id="search-input" placeholder="Search..." style="width:600px;" onkeyup="if(event.KeyCode==13){keyUp();}" onkeypress="if(event.keyCode==13){keyUp();}"/>
+<input type="text" id="search-input" placeholder="Search..." style="width:600px;" >
   </center>
 <ul id="results-container"></ul>
 </div>
@@ -31,6 +24,8 @@ TEST 3
 
 
 <script type="text/javascript">
+  if(event.keyCode!=13)
+  {
       SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
@@ -41,5 +36,6 @@ TEST 3
         fuzzy: false,
         exclude: ['Welcome']
       })
+  }
 </script>
 
