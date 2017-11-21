@@ -354,11 +354,9 @@ function compile(data){
     return query && query.length > 0
   }
   
-/*
   function isWhitelistedKey(key) {
     return [13,16,20,37,38,39,40,91].indexOf(key) === -1
   }
-*/
   
   function throwError(message){ throw new Error('SimpleJekyllSearch --- '+ message) }
 })(window, document);
