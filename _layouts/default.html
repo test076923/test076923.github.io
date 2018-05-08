@@ -8,6 +8,46 @@ layout: compress
 
   <body>
     
+	   
+    <!--스크롤바-->
+	<div class="post-content" style="position:absolute;">
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+	    <div id="example2" class="post-content" style="position:relative; float:right; margin:0px auto;">
+			<!--검색바-->
+			<div id="search-container">
+			<center>
+			<input type="text" id="search-input" placeholder="Search..." style="width:300px;">
+			</center>
+			<ul id="results-container"></ul>
+			</div>
+
+			<!-- Script pointing to jekyll-search.js -->
+			<script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>
+
+
+			<script type="text/javascript">
+			      SimpleJekyllSearch({
+				searchInput: document.getElementById('search-input'),
+				resultsContainer: document.getElementById('results-container'),
+				json: '{{ site.baseurl }}/search2.json',
+				searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+				noResultsText: '검색결과가 없습니다.',
+				limit: 10,
+				fuzzy: false,
+				exclude: ['Welcome']
+			      })
+			</script>
+			<!--검색바-->
+
+			<center>
+			<p>
+				<a href="javascript:window.scrollTo(0,0);">TOP</a>
+			</p>
+		</div>
+	</div>
+  <!--스크롤바-->
+	  
+	  
     <div id="shadow"></div>
 
       {% include header.html %}
