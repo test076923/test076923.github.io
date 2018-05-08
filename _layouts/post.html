@@ -1,21 +1,6 @@
 ---
 layout: default
 ---
-<article class="post">
-
-  <h1 class="post-title">{{ page.title }}</h1>
-
-  <p class="post-meta">
-    <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-
-    {% if page.author %}
-      &nbsp;/&nbsp;
-      <span>{{ page.author }}</span>
-    {% endif %}
-    &nbsp;/&nbsp;
-    <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">0 Comments</a>
-    
-  </p>
 
   <div class="post-content">
 
@@ -53,6 +38,26 @@ layout: default
 		</p>
 	</div>
 		
+
+
+
+
+<article class="post">
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <p class="post-meta">
+    <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+
+    {% if page.author %}
+      &nbsp;/&nbsp;
+      <span>{{ page.author }}</span>
+    {% endif %}
+    &nbsp;/&nbsp;
+    <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ page.id }}">0 Comments</a>
+    
+  </p>
+
     <!--여기다넣기-->   
     {{ content }}
     <!--여기다넣기-->
