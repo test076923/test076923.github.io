@@ -1,1 +1,47 @@
-<div id="movetopbt" class="movetopbt">animate, Click</div>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script src="/test/2148/jquery.scrollfollow.js"></script>
+<script>
+	$( document ).ready( function ()
+		{
+			$( '#example2' ).scrollFollow(
+				{
+					speed: 1000,
+					offset: 60,
+					killSwitch: 'exampleLink',
+					onText: 'Disable Follow',
+					offText: 'Enable Follow'
+				}
+			);
+		}
+	);
+</script>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		height: 2000px;
+		font-family: Georgia;
+		font-size: 0.9em;
+		line-height: 1.4em;
+	}
+
+	#example2 {
+		position: relative;
+		width: 180px;
+		margin: 10px;
+		padding: 20px 20px 20px;
+		background: #eee url(/images/sfbgTile.png);
+		border: 2px solid #42CBDC;
+	}
+
+	p {
+		margin: 7px 0 0 0;
+	}
+
+	a {
+		color: black;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+</style>
