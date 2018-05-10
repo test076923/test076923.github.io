@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
     <title>076923 : Information</title>
 
-<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="/makisuMenu/makisu.js" type="text/javascript"></script>
 <link href='https://fonts.googleapis.com/css?family=Days+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/makisuMenu/style.css" type="text/css">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="/makisuMenu/ToolTip/tip-green.css" type="text/css" />
 
 
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!--<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>-->
 <script type="text/javascript" src="/makisuMenu/ToolTip/jquery.poshytip.js"></script>
 <script type="text/javascript">
 		//<![CDATA[
@@ -259,43 +259,46 @@
 	    <a href="#">aaa</a>
 
     </section>
-    <script>
+	<script>
 
         // The `enabled` flag will be `false` if CSS 3D isn't available
-        if ( j$.fn.makisu.enabled ) {
-            var j$sashimi = j$( '.sashimi' );
-            var j$nigiri = j$( '.nigiri' );
-            var j$maki = j$( '.maki' );
+        if ( $.fn.makisu.enabled ) {
+            var $sashimi = $( '.sashimi' );
+            var $nigiri = $( '.nigiri' );
+            var $maki = $( '.maki' );
             // Create Makisus
-            j$nigiri.makisu({
+            $nigiri.makisu({
                 selector: 'dd',
                 overlap: 0.85,
                 speed: 1.7
             });
-            j$maki.makisu({
+            $maki.makisu({
                 selector: 'dd',
                 overlap: 0.6,
                 speed: 0.85
             });
-            j$sashimi.makisu({
+            $sashimi.makisu({
                 selector: 'dd',
                 overlap: 0.2,
                 speed: 0.5
             });
             // Open all
-            j$( '.list' ).makisu( 'open' );
+            $( '.list' ).makisu( 'open' );
             // Toggle on click
-            j$( '.toggle' ).on( 'click', function() {
-                j$( '.list' ).makisu( 'toggle' );
+            $( '.toggle' ).on( 'click', function() {
+                $( '.list' ).makisu( 'toggle' );
             });
             // Disable all links
-            j$( '.demo a' ).click( function( event ) {
+            $( '.demo a' ).click( function( event ) {
                 event.preventDefault();
             });
         } else {
-            j$( '.warning' ).show();
+            $( '.warning' ).show();
         }
     </script>
+</body>
+</html>
+
 </body>
 </html>
 
