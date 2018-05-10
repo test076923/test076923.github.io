@@ -22,7 +22,7 @@
 <script type="text/javascript" src="/makisuMenu/ToolTip/jquery.poshytip.js"></script>
 <script type="text/javascript">
 		//<![CDATA[
-		(function($){
+		$(function(){
 
 			$('#demo-basic').poshytip();
 			$('#demo-tip-yellow').poshytip();
@@ -173,7 +173,7 @@
 			$('#demo-live-events > a').poshytip({
 				liveEvents: true
 			});
-		})(jQuery);;
+		});
 		//]]>
 	</script>
 	<style type="text/css">
@@ -264,41 +264,48 @@
     </section>
 	<script>
 
+		var jq$ = jQuery.noConflict();
+		jq$(document).ready(function(){
+		jq$(".class_a").val();
+
+});
+		
         // The `enabled` flag will be `false` if CSS 3D isn't available
-        if ( $.fn.makisu.enabled ) {
-            var $sashimi = $( '.sashimi' );
-            var $nigiri = $( '.nigiri' );
-            var $maki = $( '.maki' );
+        if ( jq$.fn.makisu.enabled ) {
+            var jq$sashimi = jq$( '.sashimi' );
+            var jq$nigiri = jq$( '.nigiri' );
+            var jq$maki = jq$( '.maki' );
             // Create Makisus
-            $nigiri.makisu({
+            jq$nigiri.makisu({
                 selector: 'dd',
                 overlap: 0.85,
                 speed: 1.7
             });
-            $maki.makisu({
+            jq$maki.makisu({
                 selector: 'dd',
                 overlap: 0.6,
                 speed: 0.85
             });
-            $sashimi.makisu({
+            jq$sashimi.makisu({
                 selector: 'dd',
                 overlap: 0.2,
                 speed: 0.5
             });
             // Open all
-            $( '.list' ).makisu( 'open' );
+            jq$( '.list' ).makisu( 'open' );
             // Toggle on click
-            $( '.toggle' ).on( 'click', function() {
-                $( '.list' ).makisu( 'toggle' );
+            jq$( '.toggle' ).on( 'click', function() {
+                jq$( '.list' ).makisu( 'toggle' );
             });
             // Disable all links
-            $( '.demo a' ).click( function( event ) {
+            jq$( '.demo a' ).click( function( event ) {
                 event.preventDefault();
             });
         } else {
-            $( '.warning' ).show();
+            jq$( '.warning' ).show();
         }
     </script>
+
 </body>
 </html>
 
