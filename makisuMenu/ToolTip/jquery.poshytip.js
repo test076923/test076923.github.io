@@ -420,14 +420,14 @@
 			var deadOpts = $.extend({}, opts, { liveEvents: false });
 			switch (opts.showOn) {
 				case 'hover':
-					$(this).live('mouseenter.poshytip', function() {
+					this.live('mouseenter.poshytip', function() {
 						var $this = $(this);
 						if (!$this.data('poshytip'))
 							$this.poshytip(deadOpts).poshytip('mouseenter');
 					});
 					break;
 				case 'focus':
-					$(this).live('focus.poshytip', function() {
+					this.live('focus.poshytip', function() {
 						var $this = $(this);
 						if (!$this.data('poshytip'))
 							$this.poshytip(deadOpts).poshytip('show');
