@@ -415,27 +415,6 @@
 				'div.',opts.className,' div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}',
 			'</style>'].join('')).appendTo('head');
 
-		// check if we need to hook live events
-		if (opts.liveEvents && opts.showOn != 'none') {
-			var deadOpts = $.extend({}, opts, { liveEvents: false });
-			switch (opts.showOn) {
-				case 'hover':
-					this.live('mouseenter.poshytip', function() {
-						var $this = $(this);
-						if (!$this.data('poshytip'))
-							$this.poshytip(deadOpts).poshytip('mouseenter');
-					});
-					break;
-				case 'focus':
-					this.live('focus.poshytip', function() {
-						var $this = $(this);
-						if (!$this.data('poshytip'))
-							$this.poshytip(deadOpts).poshytip('show');
-					});
-					break;
-			}
-			return this;
-		}
 
 		return this.each(function() {
 			new $.Poshytip(this, opts);
