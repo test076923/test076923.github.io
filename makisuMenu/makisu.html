@@ -265,40 +265,41 @@
 	<script>
 			
         // The `enabled` flag will be `false` if CSS 3D isn't available
-        if ( jq$.fn.makisu.enabled ) {
-            var jq$sashimi = jq$( '.sashimi' );
-            var jq$nigiri = jq$( '.nigiri' );
-            var jq$maki = jq$( '.maki' );
+        if ( $.fn.makisu.enabled ) {
+            var $sashimi = $( '.sashimi' );
+            var $nigiri = $( '.nigiri' );
+            var $maki = $( '.maki' );
             // Create Makisus
-            jq$nigiri.makisu({
+            $nigiri.makisu({
                 selector: 'dd',
                 overlap: 0.85,
                 speed: 1.7
             });
-            jq$maki.makisu({
+            $maki.makisu({
                 selector: 'dd',
                 overlap: 0.6,
                 speed: 0.85
             });
-            jq$sashimi.makisu({
+            $sashimi.makisu({
                 selector: 'dd',
                 overlap: 0.2,
                 speed: 0.5
             });
             // Open all
-            jq$( '.list' ).makisu( 'open' );
+            $( '.list' ).makisu( 'open' );
             // Toggle on click
-            jq$( '.toggle' ).on( 'click', function() {
-                jq$( '.list' ).makisu( 'toggle' );
+            $( '.toggle' ).on( 'click', function() {
+                $( '.list' ).makisu( 'toggle' );
             });
             // Disable all links
-            jq$( '.demo a' ).click( function( event ) {
+            $( '.demo a' ).click( function( event ) {
                 event.preventDefault();
             });
         } else {
-            jq$( '.warning' ).show();
+            $( '.warning' ).show();
         }
     </script>
+
 
 
 </body>
