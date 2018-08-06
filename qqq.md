@@ -1,7 +1,8 @@
 ---
 bg: "star.gif"
 layout: page
-title: "12341234qq"
+title: "앙그벌레"
+icon: "favicon.ico"
 crawlertitle: "076923 : test2"
 permalink: "http://076923.github.io"
 summary: "TEST program.2"
