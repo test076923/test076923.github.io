@@ -1,7 +1,7 @@
 ---
 bg: "star.gif"
 layout: page
-title: [![2]({{ site.images }}/star.gif)]({{ site.images }}/star.gif)
+title: "[![2]({{ site.images }}/star.gif)]({{ site.images }}/star.gif)"
 icon: "favicon.ico"
 crawlertitle: "076923 : test2"
 permalink: <a href="http://076923.github.io"></a>
